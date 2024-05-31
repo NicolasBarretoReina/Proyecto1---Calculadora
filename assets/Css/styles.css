@@ -1,0 +1,113 @@
+/*
+*: Son los estilos generales 
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*
+Son los estilos aplicados al cuerpo de la maqueta, indican el color que se aplica 
+y ubica la calculadora en el centro
+*/
+
+body{
+    min-height: 100vh;
+    background-color: rgb(57, 158, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+Son los estilos de la calculadora, los cuales definen color,
+cuadriculas, tamaño, etc
+*/
+
+.calculadora{
+    border: 0.3rem solid rgb(0, 0, 0);
+    background-color: rgb(242, 219, 161);
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 350px;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 0.5rem;
+    
+}
+
+/*
+Esto establece los estilos que va a tener la pantalla 
+*/
+
+.pantalla{
+    border: 0.2rem solid rgb(0, 0, 0);
+    grid-column: 1/5;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    font-size: 3rem;
+    text-align: right;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+/*
+Estos estilos establecen el color de los botones, el color de la fuente,
+el tamaño de la misma, la alineacion al centro de los caracteres y el borde
+*/
+
+.boton{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .8rem;
+    cursor: pointer;
+}
+
+/*
+Este estilo establece la animacion del boton al poner el cursor encima
+*/
+
+.boton:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/*
+Es el que se encarga de darle el tamaño 
+de 2 columnas al boton 0*/
+
+#cero{
+    grid-column: span 2;
+}
+
+/*
+Es el encargado de darle color, borde y tamaño de 2 filas al 
+boton de igual(=)
+*/
+
+#igual{
+    border: 0.2rem solid rgb(0, 0, 0);
+    grid-row: span 2;
+    background-color: rgb(255, 0, 0);
+}
+
+/*
+Es el encargado de darle la animacion al boton igual cuando se le pasar el 
+cursor por encima 
+*/
+
+#igual:hover{
+    background-color: rgb(119, 0, 0);
+}
